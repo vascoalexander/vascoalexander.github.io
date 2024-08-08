@@ -43,7 +43,7 @@ syntax_highlighter_style: colorful
 markdown_ext:             markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:                /:categories/:year-:month-:day-:title:output_ext
+permalink:                /:categories/:title:output_ext
 
 # Disqus comments
 # disqushandler:            sighingnow
@@ -55,14 +55,24 @@ collections:
   pages:
     output: true
     permalink: /:collection/:path/
-  others:
+  notes:
     output: true
     permalink: /:collection/:path/
 
 ordered_collections:
+  - notes
   - posts
   - pages
   - others
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "post"
+      author: "Vasco Alexander Basque"
 
 page_width: 800px
 
