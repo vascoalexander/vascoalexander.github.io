@@ -1,5 +1,6 @@
 ---
 category: cheatcheats
+mermaid: true
 ---
 ### Text Styles
 

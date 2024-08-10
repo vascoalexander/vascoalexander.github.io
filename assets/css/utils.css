@@ -1,0 +1,17 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 50%;
+}
+.img-sm {
+    width: 25%;
+}
+.img-lg {
+    width: 75%
+}
+.img-xl {
+    width: 100%
+}
