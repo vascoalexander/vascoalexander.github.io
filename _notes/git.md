@@ -8,24 +8,24 @@ mermaid: true
 | git init                                       | # Initialize repository                                  |
 | git clone <repo_url>                           | # Clone repository                                       |
 | git status                                     | # View repository status                                 |
-| git add [file]                                 | # Stage changes of <file>                                |
+| git add \<file\>                                 | # Stage changes of <file>                                |
 | git add .                                      | # Stage all changes                                      |
-| git reset [file]                               | # Unstage a file while retaining other changes           |
-| git rm [file]                                  | # Delete file and stage the removal                      |
+| git reset \<file\>                               | # Unstage a file while retaining other changes           |
+| git rm \<file\>                                  | # Delete file and stage the removal                      |
 | git commit -m "message"                        | # Commit Changes                                         |
 | git branch                                     | # List branches                                          |
-| git branch [branch]                            | # Create branch                                          |
-| git checkout [branch]                          | # Switch to branch                                       |
-| git merge [branch]                             | # Merge branch                                           |
+| git branch \<branch\>                            | # Create branch                                          |
+| git checkout \<branch\>                          | # Switch to branch                                       |
+| git merge \<branch\>                             | # Merge branch                                           |
 | git remote -v                                  | # View remotes                                           |
-| git pull origin [branch]                       | # Pull changes                                           |
-| git push origin [branch]                       | # Push changes                                           |
+| git pull origin \<branch\>                       | # Pull changes                                           |
+| git push origin \<branch\>                       | # Push changes                                           |
 | git log                                        | # View commit history                                    |
 | git log --oneline                              | # View short commit history                              |
 | <br>git log --oneline --decorate --graph --all | # View commit history with graphical layout (q to quit)  |
-| git revert [commit]                            | # Revert commit                                          |
-| git reset [commit]                             | # Reset to commit                                        |
-| git reset --hard [commit]                      | # Clear staging area, rewrite working tree from [commit] |
+| git revert \<commit\>                            | # Revert commit                                          |
+| git reset \<commit\>                             | # Reset to commit                                        |
+| git reset --hard \<commit\>                      | # Clear staging area, rewrite working tree from [commit] |
 | git diff                                       | # Diff of what is changed but not staged                 |
 | git diff --staged                              | # diff of what is staged but not committed               |
 | git tag                                        | # List tags                                              |
@@ -42,18 +42,18 @@ mermaid: true
 {% include img.html source="staging.svg" alt="staging" class="center img-sm" %}
 
 ```bash
-git add [file]    # adds changes in a file to the staging area
+git add <file>    # adds changes in a file to the staging area
 git add .         # adds all changes to the staging area
 git diff          # shows unstaged changes in the working directory
 git dif --staged  # shows changes that are staged for the next commit
 git commit        # commits the staged changes
-git reset [file]  # removes file from the staging area
+git reset <file>  # removes file from the staging area
 ```
 
 #### UNSTAGE (Reverse) A FILE / ALL FILES
 
 ```bash
-git restore --staged [file-path]   # unstage specified file
+git restore --staged <file-path>   # unstage specified file
 git restore --staged .             # unstage all files
 ```
 
@@ -70,13 +70,13 @@ git checkout -- .        # revert working directory to last commit
 git fetch is used to download updates from a remote repository to your local repository without merging or modifying your local branches. This command allows you to review the changes before integrating them into your local branch.
 
 ```bash
-git fetch [remote]
+git fetch <remote>
 ```
 
 git pull is a combination of git fetch and git merge. It downloads changes and merges them into the current branch.
 
 ```bash
-git pull [remote] [branch]
+git pull <remote> <branch>
 ```
 
 #### GIT RESET --soft
@@ -138,7 +138,7 @@ git checkout master
 Then, merge your feature branch:
 
 ```bash
-git merge [feature-branch]
+git merge <feature-branch>
 ```
 
 After merging your changes locally, push them to the remote repository to make them available to your teammate and update the live version of the website:
@@ -160,14 +160,14 @@ git commit -m "add empty directory with .gitkeep"   # commit the changes
 #### REMOVE DIRECTORY FROM REPOSITORY
 
 ```bash
-git rm -r [directory] # removes a dir from git repository recursively
+git rm -r <directory> # removes a dir from git repository recursively
 ```
 
 #### CHANGE REMOTE REPOSITORY URL
 
 ```bash
 git remote -v                        # verify current remote repository
-git remote set-url origin [new-url]  # set new url of origin
+git remote set-url origin <new-url>  # set new url of origin
 git remote -v                        # verify new remote repository url
 git fetch origin                     # sync local repository to new remote
 ```
